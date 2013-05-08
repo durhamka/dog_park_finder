@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gemspec
 
 gem 'rails', '3.2.13'
 
@@ -41,6 +40,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'typhoeus'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
