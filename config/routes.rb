@@ -1,4 +1,7 @@
 DogParkFinder::Application.routes.draw do
+  get '*anything' => 'main#index'
+  root to: 'main#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
