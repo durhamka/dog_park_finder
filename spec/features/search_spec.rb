@@ -9,4 +9,12 @@ feature 'Search by Address' do
 
   end
   
+  scenario 'search returns no results' do
+    visit '/'
+    fill_in 'Where do you want to play', with: 'Boulder'
+    click_button "Search"
+    expect(page).to_not have_content("Foothills Dog Park")
+  end
+
+
 end
