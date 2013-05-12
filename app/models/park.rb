@@ -1,3 +1,4 @@
 class Park < ActiveRecord::Base
-  attr_accessible :park
+  SEARCH_RADIUS = 3000
+  
 end

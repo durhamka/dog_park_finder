@@ -9,6 +9,7 @@ end
 
 feature 'Search by Address' do
   scenario 'search nearby dog park by address' do
+    FactoryGirl.create(:park)
     visit '/'
     fill_in 'Where do you want to play', with: 'Boulder'
     click_button "Search"
