@@ -1,6 +1,4 @@
 DogParkFinder::Application.routes.draw do
-  root :to => 'main#index'
-
-  get "/search" => "search#index"
-
+  get '*anything' => 'main#index'
+  root to:'main#index'
 end

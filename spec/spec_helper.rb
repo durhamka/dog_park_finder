@@ -37,3 +37,7 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+def seed_data
+  Factory.create(:user)
+end
