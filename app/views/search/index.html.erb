@@ -1,1 +1,6 @@
-<%= @parks %>
+<%= @parks.each do |park| %>
+  <p>Park name: <%= park.name %></p>
+  <p>Park address: <%= park.address %></p>
+  <p>Park city: <%= park.city %></p>
+  <p>Park zip_code: <%= park.zip_code %></p>
+<% end %>
