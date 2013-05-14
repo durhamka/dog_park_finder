@@ -3,4 +3,6 @@ class SearchController < ApplicationController
     @parks = Park.all
     # @park = Park.search(params[:city], params[:address], params[:zip_code])
   end
+  def show
+  end
 end

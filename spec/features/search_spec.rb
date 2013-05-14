@@ -21,4 +21,9 @@ feature 'Search by Address' do
     click_button "Search"
     expect(page).to_not have_content("Valmont Dog Park")
   end
+  scenario 'user selects park and views park profile page' do
+    visit '/'
+    click_link "Foothills Dog Park"
+    expect(page).to have_content("Location and Amenities")
+  end
 end
