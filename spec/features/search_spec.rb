@@ -1,12 +1,5 @@
 require 'spec_helper'
 
-feature 'View the homepage' do
-  scenario 'user sees relevant information' do
-    visit '/'
-    expect(page.title).to eq('Dog Park Finder')
-  end
-end
-
 feature 'Search by Address' do
   scenario 'search nearby dog park by address' do
     FactoryGirl.create(:park)
