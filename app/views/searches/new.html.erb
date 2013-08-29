@@ -1,0 +1,6 @@
+<%= form_for @search, url: search_path, method: :get do |f| %>
+  <%= f.label :where_do_you_want_to_play? %>
+  <%= f.text_field :address %>
+  <%= f.submit "Search" %>
+<% end %>
+
