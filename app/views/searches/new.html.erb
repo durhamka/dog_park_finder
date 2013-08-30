@@ -1,6 +1,23 @@
-<%= form_for @search, url: search_path, method: :get do |f| %>
-  <%= f.label :where_do_you_want_to_play? %>
-  <%= f.text_field :address %>
-  <%= f.submit "Search" %>
-<% end %>
+<section class="container">
+  <header class="header">
+    <div class="logo"><%= link_to image_tag('paw_logo.png', alt: 'Dog Park Finder'), root_path %></div>
+    <div class="intro-text">Find a dog park. Play with your best friend.</div>
+  </header>
+    <section class="enter-search group">
+      <%= form_for @search, url: search_path, method: :get do |f| %>
+        <div class="search-criteria">
+          <%= f.text_field :address, :placeholder => "Where Do You Want To Play?" %>
+        </div>
+        <button class="submit">
+          <%= f.submit "Search" %>
+        </button>
+      <% end %>
+    </section>
+    <section class="dog-park guide">
+    </section>
+</section>
 
+<footer class="footer">
+  <div class="copyright">2013 - All Rights Reserved </div>
+  <div class="apprentice.io">Product of thoughtbot's apprentice.io program</div>
+</footer>
