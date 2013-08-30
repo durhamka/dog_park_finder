@@ -1,19 +1,36 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'bourbon'
+gem 'bootstrap-sass'
 gem 'high_voltage'
-gem 'sqlite3'
+gem 'jquery-rails'
+gem 'rails', '3.2.13'
+gem 'simple_form'
+gem 'typhoeus'
 
-group :test, :development do
-  gem 'capybara'
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
+end
+
+group :development, :test do
   gem 'rspec-rails'
   gem 'sqlite3'
   gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'bourne', require: false
+  gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'timecop'
 end
 
 group :production do
@@ -32,20 +49,7 @@ gem 'jdbc-sqlite3',                     :platform => :jruby
 gem 'jruby-openssl',                    :platform => :jruby
 gem 'therubyrhino',                     :platform => :jruby
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
-gem 'typhoeus'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
