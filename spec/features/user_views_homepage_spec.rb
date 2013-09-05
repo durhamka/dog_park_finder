@@ -12,6 +12,6 @@ feature 'View the homepage' do
     visit root_path
 
     click_link 'Create a New Dog Park'
-    expect(page).to have_content('Thank you for adding a new park!')
+    expect(page).to have_content('Add a New Park')
   end
 end
