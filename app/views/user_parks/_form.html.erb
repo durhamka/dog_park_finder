@@ -1,0 +1,9 @@
+<%= form_for @user_park, url: user_park_path do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :address %>
+  <%= f.text_field :city %>
+  <%= f.text_field :zip_code %>
+  <%= f.text_field :description %>
+  <%= f.file_field :picture %>
+  <%= f.submit "Create Park" %>
+<% end %>
