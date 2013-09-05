@@ -1,3 +1,3 @@
 class UserPark < ActiveRecord::Base
-  attr_accessible :name, :address, :city, :zip_code, :description
+  attr_accessible :name, :address, :city, :zip_code, :description, :picture
 end
