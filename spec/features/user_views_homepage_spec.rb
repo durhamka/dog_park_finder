@@ -8,10 +8,11 @@ feature 'View the homepage' do
     expect(page).to have_content('Find a dog park. Play with your best friend.')
   end
 
-  scenario 'user can click on a link to create a new park' do
-    visit root_path
+  scenario 'user views the navigation bar' do
+      visit root_path
 
-    click_link 'Create a New Dog Park'
-    expect(page).to have_content('Add a New Park')
+      find_link('Create a New Dog Park').visible?
+      find_link('Dog Park Guide').visible?
+      find_link('View All Parks').visible?
   end
 end

@@ -3,9 +3,6 @@
     <div class="logo"><%= link_to image_tag('paw_logo.png', alt: 'Dog Park Finder'), root_path %></div>
     <div class="intro-text">Find a dog park. Play with your best friend.</div>
   </header>
-    <section class="options">
-      <%= link_to 'Create a New Dog Park', new_user_park_path %>
-    </section>
     <section class="enter-search group">
       <%= form_for @search, url: search_path, method: :get do |f| %>
         <div class="search-criteria">

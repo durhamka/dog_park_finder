@@ -1,0 +1,29 @@
+.contain-to-grid .top-bar {
+  height: auto;
+  width: 95%;
+  margin: 40px auto;
+  @include box-shadow(0 0 4px 2px hsla(0, 0%, 0%, 0.30));
+  .title-area {
+    .name {
+      a {
+       font-size: 1.3em;
+       color: #fff;
+       font-weight: lighter;
+       border: 2px solid;
+       background: #5A6351;
+       padding-right: 30px;
+      }
+    }
+  }
+  a {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: lighter;
+    float: left;
+    background: #5A6351;
+    padding-left: 60px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

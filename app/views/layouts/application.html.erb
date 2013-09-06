@@ -27,7 +27,28 @@
     </div>
   <% end %>
 
-<%= yield %>
+<section id="wrap" role="document">
+  <div class="fixed contain-to-grid">
+    <nav class="top-bar">
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+          <h1 class="heading"><a href="<%= root_path %>">Dog Park Finder</a></h1>
+        </li>
+      </ul>
 
+      <section class="top-nav">
+        <ul class="right">
+          <li><a href="<%= new_user_park_path %>">Create a New Dog Park</a></li>
+          <li><a href="#">Dog Park Guide</a></li>
+          <li><a href="#">View All Parks</a></li>
+          <li class="divider"></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+
+<%= yield %>
+</section>
 </body>
 </html>
