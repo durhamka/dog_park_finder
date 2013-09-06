@@ -8,6 +8,24 @@
   <link href='http://fonts.googleapis.com/css?family=Skranji:400,700|Francois+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <% if flash[:alert].present? %>
+    <div data-alert class="fixed alert-box alert">
+      <%= flash[:alert] %>
+      <a href="#" classs="close">&times;</a>
+    </div>
+  <% end %>
+  <% if flash[:success].present? %>
+    <div data-alert ckass="fixed alert-box success">
+      <%= flash[:success] %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  <% end %>
+  <% if flash[:error].present? %>
+    <div data-alert class="fixed alert-box alert">
+      <%= flash[:error] %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  <% end %>
 
 <%= yield %>
 
