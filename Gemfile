@@ -6,9 +6,11 @@ gem 'rails', '3.2.13'
 
 gem 'bourbon'
 gem 'bootstrap-sass'
+gem 'devise'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'rails', '3.2.13'
+gem 'rails_admin'
 gem 'simple_form'
 gem 'typhoeus'
 
