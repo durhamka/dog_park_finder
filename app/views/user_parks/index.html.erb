@@ -6,13 +6,15 @@
     <th>Address</th>
   </tr>
 
-  <%= @user_parks.each do |user_park| %>
+  <%- @user_parks.each do |user_park| %>
     <tr>
       <td><%= user_park.name %></td>
       <td><%= user_park.address %></td>
       <td><%= user_park.city %></td>
       <td><%= user_park.zip_code %></td>
       <td><%= user_park.description %></td>
+      <td><%= button_to "+1", votes_path(user_park_id: user_park.id), method: 'post' %>
+      <td><%= user_park.votes.count %> upvote</td>
     </tr>
   <% end %>
 </table>
