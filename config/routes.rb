@@ -4,8 +4,9 @@ DogParkFinder::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
+  resources :user_parks
+
   root to:'searches#new'
 
   resource :search, only: [:show]
-  resource :user_park
 end

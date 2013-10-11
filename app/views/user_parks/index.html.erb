@@ -1,0 +1,18 @@
+<h1>All Dog Parks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+  </tr>
+
+  <%= @user_parks.each do |user_park| %>
+    <tr>
+      <td><%= user_park.name %></td>
+      <td><%= user_park.address %></td>
+      <td><%= user_park.city %></td>
+      <td><%= user_park.zip_code %></td>
+      <td><%= user_park.description %></td>
+    </tr>
+  <% end %>
+</table>

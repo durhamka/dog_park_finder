@@ -1,5 +1,5 @@
 <div class="park-form">
-  <%= form_for @user_park, url: user_park_path do |f| %>
+  <%= form_for @user_park, url: user_parks_path do |f| %>
     <div id="text_field">
       <%= f.text_field :name, :placeholder => "Name of Park" %>
       <%= f.text_field :address, :placeholder => "Address" %>

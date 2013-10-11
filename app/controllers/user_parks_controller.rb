@@ -1,8 +1,10 @@
 class UserParksController < ApplicationController
   def show
+    @user_park = UserPark.find(params[:id])
   end
 
   def index
+    @user_parks = UserPark.all
   end
 
   def new

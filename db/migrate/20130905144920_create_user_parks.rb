@@ -1,5 +1,5 @@
 class CreateUserParks < ActiveRecord::Migration
-  def up
+  def change
     create_table(:user_parks) do |t|
       t.string :name
       t.string :address
@@ -10,8 +10,5 @@ class CreateUserParks < ActiveRecord::Migration
 
       t.timestamps
     end
-  end
-
-  def down
   end
 end
