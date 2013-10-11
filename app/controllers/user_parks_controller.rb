@@ -12,13 +12,13 @@ class UserParksController < ApplicationController
   end
 
   def create
-    @user_park = UserPark.new
+    @user_park = UserPark.new(params[:user_park])
 
     if @user_park.save
       flash[:success] = "Thank you for creating a park"
       redirect_to root_path
     else
-      flash[:error] = "Please try again"
+      flash[:error] = @user_park.errors.full_messages
       render :new
     end
   end

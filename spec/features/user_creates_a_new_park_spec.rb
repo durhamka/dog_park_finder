@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'User creates a new park' do
-  scenario 'successfully' do
+  pending 'successfully' do
     visit new_user_park_path
 
     fill_in 'user_park_name', with: 'Harleigh Park'
@@ -13,5 +13,10 @@ feature 'User creates a new park' do
   end
 
   scenario 'with missing information, so it errors' do
+    visit new_user_park_path
+    click_button 'Create Park'
+
+    expect(page).to have_content("City can't be blank")
+    expect(page).to have_content("Name can't be blank")
   end
 end
