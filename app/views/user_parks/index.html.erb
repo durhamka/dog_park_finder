@@ -13,8 +13,10 @@
       <td><%= user_park.city %></td>
       <td><%= user_park.zip_code %></td>
       <td><%= user_park.description %></td>
-      <td><%= button_to "+1", votes_path(user_park_id: user_park.id), method: 'post' %>
-      <td><%= user_park.votes.count %> upvote</td>
+      <td><%= button_to "+1", votes_path(user_park_id: user_park.id, direction: true), method: 'post' %>
+      <td><%= button_to "-1", votes_path(user_park_id: user_park.id, direction: false), method: 'post' %>
+      <td><%= pluralize(user_park.upvote_count, 'upvote') %></td>
+      <td><%= pluralize(user_park.downvote_count, 'downvote') %></td>
     </tr>
   <% end %>
 </table>

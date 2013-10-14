@@ -2,7 +2,7 @@ class VotesController < ApplicationController
 
   def create
     user_park = UserPark.find(params[:user_park_id])
-    vote = user_park.votes.build
+    vote = user_park.votes.build(direction: params[:direction])
 
     if vote.save
       flash[:success] = "Thank you for your vote!"
