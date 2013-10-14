@@ -1,4 +1,11 @@
 <h1>Search results for "<%= @search %>"</h1>
-<table>
-  <%= render @user_parks %>
-</table>
+<%- if @user_parks.empty? %>
+  <p>
+  Sorry. There are no current dog parks that we know about in your city.
+  <%= link_to "Please click here to create one", new_user_park_path %>
+  </p>
+<%- else %>
+  <table>
+    <%= render @user_parks %>
+  </table>
+<%- end %>
