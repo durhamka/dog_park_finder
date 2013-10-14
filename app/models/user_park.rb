@@ -10,4 +10,8 @@ class UserPark < ActiveRecord::Base
   def downvotes
     votes.where(direction: false)
   end
+
+  def self.search(city)
+    where(city: city)
+  end
 end

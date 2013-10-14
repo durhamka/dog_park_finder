@@ -9,5 +9,7 @@ class SearchesController < ApplicationController
   end
 
   def show
+    city = params[:search][:address]
+    @user_parks = UserPark.search(city)
   end
 end
