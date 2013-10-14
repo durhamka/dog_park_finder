@@ -3,11 +3,11 @@ class UserPark < ActiveRecord::Base
   validates :name, :city, presence: true
   has_many :votes
 
-  def upvote_count
-    votes.where(direction: true).count
+  def upvotes
+    votes.where(direction: true)
   end
 
-  def downvote_count
-    votes.where(direction: false).count
+  def downvotes
+    votes.where(direction: false)
   end
 end
