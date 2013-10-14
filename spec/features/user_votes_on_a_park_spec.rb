@@ -24,3 +24,4 @@ feature 'User Votes on a Park' do
     expect(page).to have_content('1 downvote')
   end
 end
+
