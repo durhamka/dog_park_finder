@@ -6,7 +6,7 @@ feature 'User searches parks' do
     FactoryGirl.create(:user_park, name: 'Unexpected Park', city: 'St Louis')
 
     visit root_path
-    fill_in 'search_address', with: 'Denver'
+    fill_in 'search_address', with: 'denver'
     click_button 'Search'
 
     expect(page).to have_content('Expected Park')

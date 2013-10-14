@@ -4,7 +4,7 @@ class UserPark < ActiveRecord::Base
   has_many :votes
 
   def self.search(city)
-    where(city: city)
+    where(['city LIKE ?', "%#{city}%"])
   end
 
   def upvotes
