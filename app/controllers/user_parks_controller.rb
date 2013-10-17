@@ -4,7 +4,7 @@ class UserParksController < ApplicationController
   end
 
   def index
-    @user_parks = UserPark.upvotes_order
+    @user_parks = UserPark.sorted_by_popularity
   end
 
   def new

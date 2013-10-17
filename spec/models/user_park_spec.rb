@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe UserPark do
-
   describe '.sorted_by_popularity' do
-
     it 'returns the parks, sorted by upvotes' do
       unpopular_park = FactoryGirl.create(:user_park, name: 'An Unpopular Park')
       popular_park = FactoryGirl.create(:user_park, name: 'A Popular Park')
