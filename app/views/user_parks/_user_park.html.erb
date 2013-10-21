@@ -1,5 +1,5 @@
 <tr>
-  <td><%= user_park.name %></td>
+  <td><%= link_to "#{user_park.name}", user_park_path(user_park) %></td>
   <td><%= user_park.address %></td>
   <td><%= user_park.city %></td>
   <td><%= user_park.zip_code %></td>
