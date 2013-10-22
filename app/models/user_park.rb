@@ -17,8 +17,6 @@ class UserPark < ActiveRecord::Base
     upvotes.count
   end
 
-  private
-
   def upvotes
     votes.where(direction: true)
   end
