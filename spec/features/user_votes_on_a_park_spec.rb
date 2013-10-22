@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 feature 'User Votes on a Park' do
-
   scenario 'with an upvote' do
     FactoryGirl.create(:user_park)
     visit user_parks_path
