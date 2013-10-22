@@ -9,9 +9,15 @@ class UserPark < ActiveRecord::Base
 
   def self.sorted_by_popularity
     all.sort do |park_a, park_b|
-      park_b.upvotes.count <=> park_a.upvotes.count
+      park_b.upvote_count <=> park_a.upvote_count
     end
   end
+
+  def upvote_count
+    upvotes.count
+  end
+
+  private
 
   def upvotes
     votes.where(direction: true)
