@@ -1,4 +1,5 @@
 class UserParksController < ApplicationController
+  before_filter :assign_amenities, only: [:new, :create]
   def show
     @user_park = UserPark.find(params[:id])
   end
@@ -12,7 +13,7 @@ class UserParksController < ApplicationController
   end
 
   def create
-    @user_park = UserPark.new(params[:user_park])
+    @user_park = UserParkBuilder.build_park(params[:user_park])
 
     if @user_park.save
       flash[:success] = "Thank you for creating a park"
@@ -22,4 +23,11 @@ class UserParksController < ApplicationController
       render :new
     end
   end
+
+  private
+
+  def assign_amenities
+    @amenities = Amenity.amenities
+  end
+
 end

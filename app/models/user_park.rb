@@ -1,7 +1,8 @@
 class UserPark < ActiveRecord::Base
-  attr_accessible :name, :address, :city, :zip_code, :description, :picture
+  attr_accessible :name, :address, :city, :zip_code, :description, :picture, :amenities
   validates :name, :city, presence: true
   has_many :votes
+  has_many :amenities
 
   def self.search(city)
     where(['city LIKE ?', "%#{city}%"])
