@@ -13,7 +13,7 @@
     </div>
     <div id="features-boxes">
       <%- @amenities.each do |amenity| %>
-        <%= amenity_check_box(amenity) %>
+        <%= amenity_check_box(amenity, 'user_park') %>
       <%- end %>
     </div>
     <div id="submit-park">

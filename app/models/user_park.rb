@@ -4,10 +4,6 @@ class UserPark < ActiveRecord::Base
   has_many :votes
   has_many :amenities
 
-  def self.search(city)
-    where(['city LIKE ?', "%#{city}%"])
-  end
-
   def self.sorted_by_popularity
     all.sort do |park_a, park_b|
       park_b.upvote_count <=> park_a.upvote_count

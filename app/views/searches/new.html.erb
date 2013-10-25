@@ -6,8 +6,11 @@
     <section class="enter-search group">
       <%= form_for @search, url: search_path, method: :get do |f| %>
         <div class="search-criteria">
-          <%= f.text_field :address, :placeholder => "Where Do You Want To Play?" %>
+          <%= f.text_field :city, :placeholder => "Where Do You Want To Play?" %>
         </div>
+        <%- @amenities.each do |amenity| %>
+          <%= amenity_check_box(amenity, 'search') %>
+        <%- end %>
         <button class="submit">
           <%= f.submit "Search" %>
         </button>

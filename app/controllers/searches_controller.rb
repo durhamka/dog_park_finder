@@ -5,11 +5,12 @@ class SearchesController < ApplicationController
   end
 
   def new
+    @amenities = Amenity.amenities
     @search = Search.new
   end
 
   def show
-    @search = params[:search][:address]
-    @user_parks = UserPark.search(@search)
+    @search = Search.new(params[:search])
+    @user_parks = @search.results
   end
 end
