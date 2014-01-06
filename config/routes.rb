@@ -8,6 +8,7 @@ DogParkFinder::Application.routes.draw do
 
   resources :user_parks
   resources :votes
+  resources :dog_lovers
 
   resource :search, only: [:show]
 end
