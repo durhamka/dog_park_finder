@@ -10,6 +10,6 @@ feature 'User/Dog Lover signs up for an account' do
     fill_in 'Email', with: 'harleigh@cutepup.com'
     click_button 'Create My Account'
 
-    expect(dog_lover.count).to eq(1)
+    expect(page).to have_content("Thank you for creating an account")
   end
 end

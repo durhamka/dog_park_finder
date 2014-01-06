@@ -4,7 +4,7 @@ class DogLoversController < ApplicationController
   end
 
   def create
-    @dog_lover = DogLover.new(dog_lover_params)
+    @dog_lover = DogLover.new(params[:dog_lover])
     if @dog_lover.save
       flash[:success] = "Thank you for creating an account"
       redirect_to root_path
@@ -12,11 +12,5 @@ class DogLoversController < ApplicationController
       flash[:failure] = "Please try again"
       render :new
     end
-  end
-
-  private
-
-  def dog_lover_params
-    params.require(:dog_lover).permit(:name, :email)
   end
 end
