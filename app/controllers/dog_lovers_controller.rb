@@ -9,7 +9,7 @@ class DogLoversController < ApplicationController
       flash[:success] = "Thank you for creating an account"
       redirect_to root_path
     else
-      flash[:failure] = "Please try again"
+      flash[:error] = "Please try again"
       render :new
     end
   end
